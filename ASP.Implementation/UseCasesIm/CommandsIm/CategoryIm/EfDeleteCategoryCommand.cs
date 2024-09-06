@@ -31,7 +31,7 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.CategoryIm
         {
             _validator.ValidateAndThrow(request);
 
-            Category cat = Context.Categories.FirstOrDefault(c => c.Id == Id);
+            Category cat = Context.Categories.FirstOrDefault(c => c.Id == request.Id);
 
 
             if (cat != null)
