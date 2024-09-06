@@ -31,7 +31,7 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.FoodIm
         {
             _validation.ValidateAndThrow(request);
 
-            Food comment = Context.Foods.FirstOrDefault(c => c.Id == Id);
+            Food comment = Context.Foods.FirstOrDefault(c => c.Id == request.Id);
 
 
             if (comment != null)
