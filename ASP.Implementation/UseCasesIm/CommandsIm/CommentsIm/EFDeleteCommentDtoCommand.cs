@@ -35,7 +35,7 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.CommentsIm
         {
             _validator.ValidateAndThrow(data);
 
-            Comment comment = Context.Comments.FirstOrDefault(c => c.Id == Id); 
+            Comment comment = Context.Comments.FirstOrDefault(c => c.Id == data.Id); 
 
                 
             if (comment != null)
