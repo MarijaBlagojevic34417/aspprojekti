@@ -31,7 +31,7 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.RateIm
         {
             _validator.ValidateAndThrow(request);
 
-            Rate rate = Context.Rates.FirstOrDefault(c => c.Id == Id);
+            Rate rate = Context.Rates.FirstOrDefault(c => c.Id == request.Id);
 
 
             if (rate != null)
