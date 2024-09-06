@@ -31,12 +31,12 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.RecipeIm
         {
             _validator.ValidateAndThrow(request);
 
-            Comment comment = Context.Comments.FirstOrDefault(c => c.Id == Id);
+            Recipe rec = Context.Recipes.FirstOrDefault(c => c.Id == request.Id);
 
 
-            if (comment != null)
+            if (rec != null)
             {
-                comment.IsActive = !comment.IsActive;
+                rec.IsActive = !rec.IsActive;
                 Context.SaveChanges();
             }
 
