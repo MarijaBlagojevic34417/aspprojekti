@@ -31,7 +31,7 @@ namespace ASP.Implementation.UseCasesIm.CommandsIm.ReactionIm
 
             _validator.ValidateAndThrow(request);
 
-            Reaction reaction = Context.Reactions.FirstOrDefault(r => r.Id == Id);
+            Reaction reaction = Context.Reactions.FirstOrDefault(r => r.Id == request.Id);
                 
               
 
